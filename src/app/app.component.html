@@ -10,7 +10,8 @@
     <!-- Toolbar -->
     <header class="toolbar" role="banner">
       <div class="toolbar-content">
-        <img width="40" alt="Angular Logo" src="../assets/image/logo.svg" />
+        <a href="#" class="logo">WILLZ1N</a>
+        <!-- <img width="40" alt="Angular Logo" src="../assets/image/logo.svg" /> -->
 
         <div class="spacer"></div>
 
@@ -22,15 +23,67 @@
           </div>
 
           <ul class="nav-list">
-            <li><a aria-label="Home" href="/" class="navbar-a"> Home </a></li>
-            <li><a aria-label="Home" href="/" class="navbar-a"> About </a></li>
-            <li><a aria-label="Home" href="/" class="navbar-a"> About </a></li>
-            <li><a aria-label="Home" href="/" class="navbar-a"> About </a></li>
+            <li>
+              <a
+                aria-label="Home"
+                href="#home"
+                (click)="teste()"
+                class="navbar-a"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="About"
+                href="#about"
+                (click)="teste()"
+                class="navbar-a"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Services"
+                href="#services"
+                (click)="teste()"
+                class="navbar-a"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Portfolio"
+                href="#portfolio"
+                (click)="teste()"
+                class="navbar-a"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="Contact"
+                href="#contact"
+                (click)="teste()"
+                class="navbar-a"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div class="content" role="main"></div>
+    <main>
+      <section class="heading" id="home">Home</section>
+      <section class="heading" id="about">About</section>
+      <section class="heading" id="services">Services</section>
+      <section class="heading" id="portfolio">Portfolio</section>
+      <section class="heading" id="contact">Contact</section>
+    </main>
   </body>
 </html>
