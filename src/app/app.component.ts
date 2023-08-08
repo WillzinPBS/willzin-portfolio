@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
     this.sections = document.querySelectorAll('section');
     this.activeClass = 'active';
 
+    scroll(0, 1);
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -54,7 +56,7 @@ export class AppComponent implements OnInit {
       let offset = sec.offsetTop;
       let height = sec.offsetHeight;
       let id = sec.getAttribute('id');
-      console.log(top, offset, height);
+
       if (top >= offset - 160 && top < offset + height) {
         this.navLinks.forEach((links: HTMLElement) => {
           links.classList.remove('active');
