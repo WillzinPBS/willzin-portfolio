@@ -12,12 +12,14 @@ export class AppComponent implements OnInit {
   mobileMenu: any;
   navList: any;
   navLinks: any;
+  sections: any;
   activeClass: any;
 
   ngOnInit(): void {
     this.mobileMenu = document.querySelector('.mobile-menu');
     this.navList = document.querySelector('.nav-list');
     this.navLinks = document.querySelectorAll('.nav-list a');
+    this.sections = document.querySelectorAll('section');
     this.activeClass = 'active';
 
     this.handleClick = this.handleClick.bind(this);
@@ -39,17 +41,26 @@ export class AppComponent implements OnInit {
     this.animateLinks();
   }
 
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   const offset =
-  //     window.pageYOffset ||
-  //     document.documentElement.scrollTop ||
-  //     document.body.scrollTop ||
-  //     0;
-  //   if (offset > 10) {
-  //     this.isFixedNavbar = true;
-  //   } else {
-  //     this.isFixedNavbar = false;
-  //   }
-  // }
+  teste() {
+    if (this.mobileMenu.classList.contains('active')) {
+      this.handleClick();
+    }
+  }
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll() {
+    this.sections.forEach((sec: HTMLElement) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+      console.log(top, offset, height);
+      if (top >= offset - 160 && top < offset + height) {
+        this.navLinks.forEach((links: HTMLElement) => {
+          links.classList.remove('active');
+          document.querySelector('[href*=' + id + ']')?.classList.add('active');
+        });
+      }
+    });
+  }
 }
