@@ -160,18 +160,53 @@ section {
   color: #fff;
 }
 
+section:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 40vw;
+    height: 100vh;
+  }
+
+  .description h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #0000008a;
+  }
+
+  .description p {
+    border-right: 2px solid #fff;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 auto 0 0;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .typing-animation {
+    animation: blinkCursor 700ms infinite normal, typing 3s steps(35) 1s normal both;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 40vw;
+    height: 100vh;
+  }
+}
+
 section:nth-child(odd) {
   background: #1f243d;
-  ;
 }
-
-/* section:nth-child(1) {
-  background: #1f243d;
-}
-
-section:nth-child(2) {
-  background: #1f243d;
-} */
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
@@ -244,5 +279,23 @@ section:nth-child(2) {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 92%;
+  }
+}
+
+@keyframes blinkCursor {
+  from {}
+
+  to {
+    border-right-color: transparent;
   }
 }
