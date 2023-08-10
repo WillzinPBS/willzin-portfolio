@@ -188,19 +188,61 @@ section:nth-child(1) {
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
+    width: 100%;
   }
 
   .typing-animation {
-    animation: blinkCursor 700ms infinite normal, typing 3s steps(35) 1s normal both;
+    animation: blinkCursor 700ms infinite normal, typing 3s steps(35) 1s alternate both;
+    animation-iteration-count: infinite;
   }
+
+  .description .about {
+    text-decoration: none;
+    margin-top: 25%;
+    position: absolute;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: 4em;
+    transition: 0.5s;
+    color: #fff;
+    background: #212129;
+    box-shadow: 0px 5px 18px #000f;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .description .about:hover {}
 
   .image {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     width: 40vw;
     height: 100vh;
+  }
+
+  .image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid #0000008a;
+  }
+}
+
+@keyframes typingWithDelay {
+
+  0%,
+  100% {
+    animation-timing-function: steps(35);
+  }
+
+  50% {
+    animation-timing-function: steps(35);
+  }
+
+  51% {
+    width: 100%;
+    animation-timing-function: steps(1);
   }
 }
 
@@ -287,9 +329,9 @@ section:nth-child(odd) {
     width: 0;
   }
 
-  to {
+  /* to {
     width: 92%;
-  }
+  } */
 }
 
 @keyframes blinkCursor {
