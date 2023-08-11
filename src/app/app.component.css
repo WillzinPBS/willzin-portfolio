@@ -7,6 +7,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  z-index: 1;
+}
+
 body,
 main {
   margin: 0;
@@ -180,7 +184,7 @@ section:nth-child(1) {
     color: #0000008a;
   }
 
-  .description p {
+  .description .line {
     border-right: 2px solid #fff;
     font-size: 40px;
     font-weight: 800;
@@ -197,20 +201,43 @@ section:nth-child(1) {
   }
 
   .description .about {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
-    margin-top: 25%;
+    margin-top: 50vh;
     position: absolute;
     line-height: 0;
     padding: 1.6rem 3rem;
     border-radius: 4em;
-    transition: 0.5s;
+    transition: 0.3s;
     color: #fff;
     background: #212129;
     box-shadow: 0px 5px 18px #000f;
     font-family: "Nunito", sans-serif;
   }
 
-  .description .about:hover {}
+  .description .about:hover {
+    background: #1d1d24;
+    gap: 15px;
+  }
+
+  .description .about p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .description .about img {
+    max-width: 16%;
+    height: auto;
+    display: block;
+  }
+
+  .asd {
+    display: contents;
+  }
 
   .image {
     display: flex;
