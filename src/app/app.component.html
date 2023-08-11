@@ -27,7 +27,7 @@
               <a
                 aria-label="Home"
                 href="#home"
-                (click)="teste()"
+                (click)="scrollToSection()"
                 class="navbar-a"
               >
                 Home
@@ -37,7 +37,7 @@
               <a
                 aria-label="About"
                 href="#about"
-                (click)="teste()"
+                (click)="scrollToSection()"
                 class="navbar-a"
               >
                 About
@@ -47,7 +47,7 @@
               <a
                 aria-label="Services"
                 href="#services"
-                (click)="teste()"
+                (click)="scrollToSection()"
                 class="navbar-a"
               >
                 Services
@@ -57,7 +57,7 @@
               <a
                 aria-label="Portfolio"
                 href="#portfolio"
-                (click)="teste()"
+                (click)="scrollToSection()"
                 class="navbar-a"
               >
                 Portfolio
@@ -67,7 +67,7 @@
               <a
                 aria-label="Contact"
                 href="#contact"
-                (click)="teste()"
+                (click)="scrollToSection()"
                 class="navbar-a"
               >
                 Contact
@@ -85,8 +85,8 @@
             <h2>Hi There,<br />I'm Willian Brito</h2>
             <p class="line typing-animation">I'm Backend developer</p>
           </div>
-          <a class="about" href="#about">
-            <p class="asd">About me</p>
+          <a class="about-btn" href="#about">
+            <p>About me</p>
             <img src="../assets/image/down_arrow.svg" alt="" />
           </a>
         </div>
@@ -94,7 +94,9 @@
           <img src="../assets/image/eudrawned.png" alt="image" />
         </div>
       </section>
-      <section class="heading" id="about">About</section>
+      <section class="heading" id="about">
+        <div class="about"></div>
+      </section>
       <section class="heading" id="services">Services</section>
       <section class="heading" id="portfolio">Portfolio</section>
       <section class="heading" id="contact">Contact</section>

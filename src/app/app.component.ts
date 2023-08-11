@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
     this.animateLinks();
   }
 
-  teste() {
+  scrollToSection() {
     if (this.mobileMenu.classList.contains('active')) {
       this.handleClick();
     }

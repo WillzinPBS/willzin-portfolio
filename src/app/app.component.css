@@ -160,6 +160,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 70px;
   background: #323946;
   color: #fff;
 }
@@ -168,6 +169,7 @@ section:nth-child(1) {
   display: flex;
   justify-content: center;
   gap: 50px;
+  padding: 0;
 
   .description {
     display: flex;
@@ -200,7 +202,7 @@ section:nth-child(1) {
     animation-iteration-count: infinite;
   }
 
-  .description .about {
+  .description .about-btn {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -217,26 +219,22 @@ section:nth-child(1) {
     font-family: "Nunito", sans-serif;
   }
 
-  .description .about:hover {
+  .description .about-btn:hover {
     background: #1d1d24;
     gap: 15px;
   }
 
-  .description .about p {
+  .description .about-btn p {
     font-size: 18px;
     font-weight: 700;
     color: #fff;
     white-space: nowrap;
   }
 
-  .description .about img {
+  .description .about-btn img {
     max-width: 16%;
     height: auto;
     display: block;
-  }
-
-  .asd {
-    display: contents;
   }
 
   .image {
@@ -253,6 +251,21 @@ section:nth-child(1) {
     height: auto;
     border-radius: 50%;
     border: 10px solid #0000008a;
+  }
+}
+
+section:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .about {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background: #11141a4f;
+    border-radius: 4px;
+    border: 2px solid #1f1f1f5b;
   }
 }
 
