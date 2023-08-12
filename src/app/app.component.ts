@@ -15,12 +15,16 @@ export class AppComponent implements OnInit {
   sections: any;
   activeClass: any;
 
+  idade: any;
+
   ngOnInit(): void {
     this.mobileMenu = document.querySelector('.mobile-menu');
     this.navList = document.querySelector('.nav-list');
     this.navLinks = document.querySelectorAll('.nav-list a');
     this.sections = document.querySelectorAll('section');
     this.activeClass = 'active';
+
+    this.idade = this.calculateAge(new Date(2003, 5, 9));
 
     scroll(0, 1);
 
@@ -47,6 +51,15 @@ export class AppComponent implements OnInit {
     if (this.mobileMenu.classList.contains('active')) {
       this.handleClick();
     }
+  }
+
+  calculateAge(birthDate: Date): number {
+    const currentDate = new Date();
+    const differenceInMilliseconds =
+      currentDate.getTime() - birthDate.getTime();
+    const ageInYears =
+      differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+    return Math.floor(ageInYears);
   }
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
